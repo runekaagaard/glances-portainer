@@ -4,13 +4,13 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile
-    restart: always
-    pid: "host"
+    # restart: always
+    # pid: "host"
     privileged: true
-    network_mode: "host"
+    # network_mode: "host"
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock:ro"
-      - "/run/user/1000/podman/podman.sock:/run/user/1000/podman/podman.sock:ro"
+      # - "/run/user/1000/podman/podman.sock:/run/user/1000/podman/podman.sock:ro"
       # - "./glances.conf:/glances/conf/glances.conf"
     environment:
       - TZ=${TZ}
